@@ -5,516 +5,108 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>YB Industrial Solutions | Bureau d'études industrielles</title>
-
-<meta name="description" content="YB Industrial Solutions : conception mécanique 2D/3D, méthodes industrielles, industrialisation, études de faisabilité et optimisation des processus au Maroc.">
-
-<meta name="keywords" content="bureau d'études industriel, conception mécanique 3D, SolidWorks, méthodes industrielles, industrialisation, Kénitra, Maroc">
-
+<title>YB Industrial Solutions | Bureau d'études industrielles Maroc</title>
+<meta name="description" content="YB Industrial Solutions accompagne les industriels en conception mécanique 2D/3D, méthodes, industrialisation, faisabilité et chiffrage au Maroc.">
+<meta name="keywords" content="YB Industrial Solutions, bureau études industriel, conception 3D, SolidWorks, méthodes industrielles, industrialisation Maroc">
 <meta name="author" content="YB Industrial Solutions">
 
 <style>
 :root {
-  --navy: #10283f;
-  --navy2: #173c59;
-  --turquoise: #00b5ad;
-  --light: #f3f7fa;
-  --white: #ffffff;
-  --text: #263849;
-  --muted: #687b8c;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  color: var(--text);
-  background: var(--white);
-  line-height: 1.6;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.container {
-  width: min(1160px, 91%);
-  margin: auto;
-}
-
-/* HEADER */
-
-header {
-  background: var(--navy);
-  color: white;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  box-shadow: 0 4px 18px #071a2c30;
-}
-
-.navbar {
-  min-height: 76px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-.logo {
-  font-size: 25px;
-  font-weight: 800;
-  letter-spacing: 1px;
-}
-
-.logo span {
-  color: var(--turquoise);
-}
-
-nav {
-  display: flex;
-  gap: 25px;
-  align-items: center;
-}
-
-nav a {
-  font-size: 14px;
-  color: #e1ebf3;
-  transition: .3s;
-}
-
-nav a:hover {
-  color: var(--turquoise);
-}
-
-.nav-contact {
-  background: var(--turquoise);
-  color: white;
-  padding: 11px 18px;
-  border-radius: 5px;
-  font-weight: bold;
-}
-
-/* HERO */
-
-.hero {
-  background:
-    linear-gradient(90deg, rgba(9,29,47,.96), rgba(9,29,47,.77)),
-    url("images/hero-industrie.jpg") center/cover;
-  color: white;
-  min-height: 580px;
-  display: flex;
-  align-items: center;
-}
-
-.hero-content {
-  max-width: 760px;
-  padding: 85px 0;
-}
-
-.eyebrow {
-  color: var(--turquoise);
-  font-weight: bold;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  font-size: 13px;
-}
-
-.hero h1 {
-  font-size: clamp(36px, 5vw, 60px);
-  line-height: 1.12;
-  margin: 22px 0;
-}
-
-.hero h1 span {
-  color: var(--turquoise);
-}
-
-.hero p {
-  color: #d4e0e9;
-  font-size: 17px;
-  max-width: 650px;
-  margin-bottom: 32px;
-}
-
-.btn {
-  display: inline-block;
-  padding: 14px 23px;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: .3s;
-  margin: 5px 8px 5px 0;
-}
-
-.btn-primary {
-  background: var(--turquoise);
-  color: white;
-}
-
-.btn-outline {
-  border: 1px solid #ffffff80;
-  color: white;
-}
-
-.btn:hover {
-  transform: translateY(-3px);
-  opacity: .9;
-}
-
-/* GENERAL */
-
-section {
-  padding: 85px 0;
-}
-
-.section-title {
-  text-align: center;
-  margin-bottom: 45px;
-}
-
-.section-title small {
-  color: var(--turquoise);
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-weight: bold;
-}
-
-.section-title h2 {
-  color: var(--navy);
-  font-size: clamp(27px, 4vw, 39px);
-  margin: 10px 0;
-}
-
-.section-title p {
-  color: var(--muted);
-  max-width: 700px;
-  margin: auto;
-}
-
-/* ABOUT */
-
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
-  align-items: center;
-}
-
-.about-image img {
-  width: 100%;
-  height: 390px;
-  object-fit: cover;
-  border-radius: 10px;
-  background: #e6edf2;
-}
-
-.about-text h2 {
-  color: var(--navy);
-  font-size: 34px;
-  margin-bottom: 20px;
-}
-
-.about-text p {
-  color: var(--muted);
-  margin-bottom: 16px;
-}
-
-/* SERVICES */
-
-.services {
-  background: var(--light);
-}
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
-}
-
-.card {
-  background: white;
-  border-radius: 9px;
-  overflow: hidden;
-  box-shadow: 0 8px 28px #10283f0d;
-  transition: .3s;
-}
-
-.card:hover {
-  transform: translateY(-7px);
-  box-shadow: 0 15px 35px #10283f18;
-}
-
-.card img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  background: #e5edf2;
-}
-
-.card-content {
-  padding: 25px;
-}
-
-.card h3 {
-  color: var(--navy);
-  font-size: 20px;
-  margin-bottom: 12px;
-}
-
-.card p {
-  color: var(--muted);
-  font-size: 14px;
-}
-
-.card ul {
-  padding-left: 18px;
-  margin-top: 15px;
-  color: var(--text);
-  font-size: 14px;
-}
-
-/* EXPERTISE */
-
-.expertise {
-  background: var(--navy);
-  color: white;
-}
-
-.expertise .section-title h2 {
-  color: white;
-}
-
-.expertise .section-title p {
-  color: #c1d0dc;
-}
-
-.expertise-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-}
-
-.expertise-item {
-  border: 1px solid #ffffff25;
-  padding: 28px 20px;
-  border-radius: 8px;
-  text-align: center;
-}
-
-.expertise-item strong {
-  color: var(--turquoise);
-  display: block;
-  font-size: 19px;
-  margin-bottom: 9px;
-}
-
-/* PORTFOLIO */
-
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 28px;
-}
-
-.project {
-  border-radius: 9px;
-  overflow: hidden;
-  background: var(--light);
-}
-
-.project img {
-  width: 100%;
-  height: 290px;
-  object-fit: cover;
-  display: block;
-  background: #e6edf2;
-}
-
-.project-info {
-  padding: 23px;
-}
-
-.project-info h3 {
-  color: var(--navy);
-  margin-bottom: 8px;
-}
-
-.project-info p {
-  color: var(--muted);
-  font-size: 14px;
-}
-
-.demo {
-  display: inline-block;
-  background: #d9f5f2;
-  color: #087c75;
-  font-size: 11px;
-  font-weight: bold;
-  padding: 5px 9px;
-  border-radius: 4px;
-  margin-bottom: 12px;
-}
-
-/* PROCESS */
-
-.process {
-  background: var(--light);
-}
-
-.steps {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-}
-
-.step {
-  background: white;
-  padding: 25px;
-  border-radius: 8px;
-  border-top: 4px solid var(--turquoise);
-}
-
-.step span {
-  font-size: 30px;
-  color: var(--turquoise);
-  font-weight: bold;
-}
-
-.step h3 {
-  color: var(--navy);
-  margin: 12px 0;
-}
-
-.step p {
-  color: var(--muted);
-  font-size: 14px;
-}
-
-/* CONTACT */
-
-.contact {
-  background: var(--navy);
-  color: white;
-}
-
-.contact .section-title h2 {
-  color: white;
-}
-
-.contact .section-title p {
-  color: #cbd8e2;
-}
-
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-}
-
-.contact-info h3 {
-  color: var(--turquoise);
-  margin-bottom: 20px;
-}
-
-.contact-info p {
-  margin: 14px 0;
-  color: #e0e9ef;
-}
-
-.contact-box {
-  background: white;
-  color: var(--text);
-  border-radius: 8px;
-  padding: 28px;
-}
-
-.contact-box h3 {
-  color: var(--navy);
-  margin-bottom: 18px;
-}
-
-.contact-box a {
-  display: block;
-  padding: 14px;
-  background: var(--light);
-  border-radius: 5px;
-  margin-top: 12px;
-  color: var(--navy);
-  font-weight: bold;
-}
-
-.contact-box a:hover {
-  background: #d9f5f2;
-}
-
-/* FOOTER */
-
-footer {
-  background: #091c2d;
-  color: #c2d0dc;
-  text-align: center;
-  padding: 25px 10px;
-  font-size: 13px;
-}
-
-footer strong {
-  color: var(--turquoise);
-}
-
-/* MOBILE */
-
-@media(max-width: 850px) {
-  .navbar {
-    flex-direction: column;
-    padding: 17px 0;
-  }
-
-  nav {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 13px;
-  }
-
-  .about-grid,
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .cards {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .expertise-grid,
-  .steps {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media(max-width: 560px) {
-  .cards,
-  .project-grid,
-  .expertise-grid,
-  .steps {
-    grid-template-columns: 1fr;
-  }
-
-  section {
-    padding: 60px 0;
-  }
-
-  .hero {
-    min-height: 500px;
-  }
-
-  nav a {
-    font-size: 12px;
-  }
+  --navy:#10283f;
+  --navy2:#183c59;
+  --turquoise:#00b5ad;
+  --light:#f3f7fa;
+  --white:#fff;
+  --text:#263849;
+  --muted:#687b8c;
+}
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;color:var(--text);line-height:1.6}
+a{text-decoration:none;color:inherit}
+img{display:block;width:100%;object-fit:cover}
+.container{width:min(1160px,92%);margin:auto}
+header{background:var(--navy);color:white;position:sticky;top:0;z-index:100}
+.navbar{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-size:23px;font-weight:800;letter-spacing:1px}
+.logo span{color:var(--turquoise)}
+nav{display:flex;gap:22px;align-items:center;flex-wrap:wrap}
+nav a{font-size:14px;color:#e1ebf3}
+nav a:hover{color:var(--turquoise)}
+.nav-contact{background:var(--turquoise);padding:10px 16px;border-radius:5px;color:white}
+.hero{
+ min-height:590px;display:flex;align-items:center;color:white;
+ background:linear-gradient(90deg,rgba(9,29,47,.96),rgba(9,29,47,.70)),
+ url("images/hero-industrie.jpg") center/cover no-repeat;
+}
+.hero-content{max-width:760px;padding:90px 0}
+.eyebrow{color:var(--turquoise);font-size:13px;font-weight:bold;letter-spacing:3px;text-transform:uppercase}
+.hero h1{font-size:clamp(36px,5vw,61px);line-height:1.12;margin:22px 0}
+.hero h1 span{color:var(--turquoise)}
+.hero p{color:#d4e0e9;font-size:17px;max-width:650px;margin-bottom:30px}
+.btn{display:inline-block;padding:14px 22px;border-radius:5px;font-weight:bold;margin:5px 7px 5px 0;transition:.3s}
+.btn:hover{transform:translateY(-3px)}
+.btn-primary{background:var(--turquoise);color:white}
+.btn-outline{border:1px solid #ffffff80;color:white}
+section{padding:85px 0}
+.section-title{text-align:center;margin-bottom:45px}
+.section-title small{color:var(--turquoise);font-weight:bold;letter-spacing:2px;text-transform:uppercase}
+.section-title h2{font-size:clamp(27px,4vw,39px);color:var(--navy);margin:10px 0}
+.section-title p{color:var(--muted);max-width:720px;margin:auto}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.about-image img{height:390px;border-radius:10px;background:#e5edf2}
+.about-text h2{font-size:34px;color:var(--navy);margin:12px 0 20px}
+.about-text p{color:var(--muted);margin-bottom:15px}
+.services,.process{background:var(--light)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:25px}
+.card{background:white;border-radius:9px;overflow:hidden;box-shadow:0 8px 28px #10283f0d;transition:.3s}
+.card:hover{transform:translateY(-6px)}
+.card img{height:225px;background:#e5edf2}
+.card-content{padding:25px}
+.card h3{color:var(--navy);font-size:20px;margin-bottom:12px}
+.card p,.card li{color:var(--muted);font-size:14px}
+.card ul{padding-left:18px;margin-top:14px}
+.expertise{background:var(--navy);color:white}
+.expertise .section-title h2{color:white}
+.expertise .section-title p{color:#c1d0dc}
+.expertise-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.expertise-item{border:1px solid #ffffff25;padding:28px 18px;border-radius:8px;text-align:center}
+.expertise-item strong{display:block;color:var(--turquoise);font-size:18px;margin-bottom:8px}
+.project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
+.project{border-radius:9px;overflow:hidden;background:var(--light)}
+.project img{height:290px;background:#e5edf2}
+.project-info{padding:23px}
+.project-info h3{color:var(--navy);margin-bottom:8px}
+.project-info p{color:var(--muted);font-size:14px}
+.demo{display:inline-block;background:#d9f5f2;color:#087c75;font-size:11px;font-weight:bold;padding:5px 9px;border-radius:4px;margin-bottom:12px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.step{background:white;padding:25px;border-radius:8px;border-top:4px solid var(--turquoise)}
+.step span{font-size:30px;color:var(--turquoise);font-weight:bold}
+.step h3{color:var(--navy);margin:12px 0}
+.step p{color:var(--muted);font-size:14px}
+.contact{background:var(--navy);color:white}
+.contact .section-title h2{color:white}
+.contact .section-title p{color:#cbd8e2}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.contact-info h3{color:var(--turquoise);margin-bottom:20px}
+.contact-info p{margin:14px 0;color:#e0e9ef}
+.contact-box{background:white;color:var(--text);border-radius:8px;padding:28px}
+.contact-box h3{color:var(--navy);margin-bottom:15px}
+.contact-box a{display:block;padding:14px;background:var(--light);border-radius:5px;margin-top:12px;color:var(--navy);font-weight:bold}
+.contact-box a:hover{background:#d9f5f2}
+footer{background:#091c2d;color:#c2d0dc;text-align:center;padding:25px 10px;font-size:13px}
+footer strong{color:var(--turquoise)}
+@media(max-width:850px){
+ .navbar{flex-direction:column;padding:16px 0}
+ nav{justify-content:center;gap:13px}
+ .about-grid,.contact-grid{grid-template-columns:1fr}
+ .cards{grid-template-columns:1fr 1fr}
+ .expertise-grid,.steps{grid-template-columns:1fr 1fr}
+}
+@media(max-width:560px){
+ .cards,.project-grid,.expertise-grid,.steps{grid-template-columns:1fr}
+ section{padding:60px 0}
+ .hero{min-height:500px}
+ nav a{font-size:12px}
 }
 </style>
 </head>
@@ -522,336 +114,243 @@ footer strong {
 <body>
 
 <header>
-  <div class="container navbar">
-    <a href="#accueil" class="logo">YB <span>INDUSTRIAL SOLUTIONS</span></a>
-
-    <nav>
-      <a href="#accueil">Accueil</a>
-      <a href="#apropos">À propos</a>
-      <a href="#services">Services</a>
-      <a href="#projets">Projets</a>
-      <a href="#contact" class="nav-contact">Contact</a>
-    </nav>
-  </div>
+ <div class="container navbar">
+  <a href="#accueil" class="logo">YB <span>INDUSTRIAL SOLUTIONS</span></a>
+  <nav>
+   <a href="#accueil">Accueil</a>
+   <a href="#apropos">À propos</a>
+   <a href="#services">Services</a>
+   <a href="#expertise">Expertise</a>
+   <a href="#projets">Projets</a>
+   <a href="#contact" class="nav-contact">Contact</a>
+  </nav>
+ </div>
 </header>
 
 <!-- ACCUEIL -->
-
 <section class="hero" id="accueil">
-  <div class="container">
-    <div class="hero-content">
-      <div class="eyebrow">Bureau d'études industrielles</div>
-
-      <h1>
-        L'ingénierie au service de la
-        <span>performance industrielle</span>
-      </h1>
-
-      <p>
-        YB Industrial Solutions accompagne les entreprises dans
-        leurs projets de conception mécanique, méthodes industrielles,
-        industrialisation et optimisation des processus.
-      </p>
-
-      <a href="#services" class="btn btn-primary">Découvrir nos services</a>
-      <a href="#contact" class="btn btn-outline">Demander une étude</a>
-    </div>
+ <div class="container">
+  <div class="hero-content">
+   <div class="eyebrow">Bureau d'études industrielles</div>
+   <h1>L'ingénierie au service de la <span>performance industrielle</span></h1>
+   <p>
+    YB Industrial Solutions accompagne les entreprises dans leurs
+    projets de conception mécanique, méthodes industrielles,
+    industrialisation et optimisation des processus.
+   </p>
+   <a href="#services" class="btn btn-primary">Découvrir nos services</a>
+   <a href="#contact" class="btn btn-outline">Demander une étude</a>
   </div>
+ </div>
 </section>
 
-<!-- A PROPOS -->
-
+<!-- PRESENTATION -->
 <section id="apropos">
-  <div class="container about-grid">
-
-    <div class="about-image">
-      <img src="images/bureau-etudes.jpg"
-           alt="Bureau d'études et conception industrielle">
-    </div>
-
-    <div class="about-text">
-      <div class="eyebrow">Qui sommes-nous ?</div>
-
-      <h2>Une approche technique orientée résultats</h2>
-
-      <p>
-        YB Industrial Solutions est un projet de bureau d'études
-        spécialisé dans les solutions techniques et industrielles.
-      </p>
-
-      <p>
-        Notre approche associe conception mécanique, analyse des
-        processus, étude de faisabilité et amélioration continue
-        afin de répondre aux besoins techniques des industriels.
-      </p>
-
-      <p>
-        Nous accompagnons les projets de l'analyse du besoin
-        jusqu'à la proposition d'une solution technique adaptée.
-      </p>
-
-      <a href="#contact" class="btn btn-primary">Parlons de votre projet</a>
-    </div>
-
+ <div class="container about-grid">
+  <div class="about-image">
+   <img src="images/bureau-etudes.jpg" alt="Bureau d'études industriel">
   </div>
+  <div class="about-text">
+   <div class="eyebrow">Qui sommes-nous ?</div>
+   <h2>Une approche technique orientée résultats</h2>
+   <p>
+    YB Industrial Solutions est un projet de bureau d'études
+    spécialisé dans les solutions techniques et industrielles.
+   </p>
+   <p>
+    Notre approche associe conception mécanique, analyse des
+    processus, étude de faisabilité et amélioration continue
+    afin de répondre aux besoins techniques des industriels.
+   </p>
+   <p>
+    Nous accompagnons les projets de l'analyse du besoin jusqu'à
+    la proposition d'une solution technique adaptée.
+   </p>
+   <a href="#contact" class="btn btn-primary">Parlons de votre projet</a>
+  </div>
+ </div>
 </section>
 
 <!-- SERVICES -->
-
 <section class="services" id="services">
-  <div class="container">
-
-    <div class="section-title">
-      <small>Nos compétences</small>
-      <h2>Nos domaines d'intervention</h2>
-      <p>Des prestations techniques adaptées aux besoins de l'industrie.</p>
-    </div>
-
-    <div class="cards">
-
-      <article class="card">
-        <img src="images/conception-3d.jpg"
-             alt="Conception mécanique 3D">
-        <div class="card-content">
-          <h3>Conception mécanique 2D / 3D</h3>
-          <p>
-            Conception et développement de pièces, ensembles mécaniques
-            et outillages industriels.
-          </p>
-          <ul>
-            <li>Modélisation 3D</li>
-            <li>Mise en plan 2D</li>
-            <li>Conception d'outillages</li>
-            <li>Analyse des solutions techniques</li>
-          </ul>
-        </div>
-      </article>
-
-      <article class="card">
-        <img src="images/methodes-process.jpg"
-             alt="Méthodes et industrialisation">
-        <div class="card-content">
-          <h3>Méthodes & Industrialisation</h3>
-          <p>
-            Analyse et optimisation des moyens et processus
-            de production industrielle.
-          </p>
-          <ul>
-            <li>Études de faisabilité</li>
-            <li>Analyse des temps de fabrication</li>
-            <li>Suivi des outillages</li>
-            <li>Préparation des nouveaux projets</li>
-          </ul>
-        </div>
-      </article>
-
-      <article class="card">
-        <img src="images/etude-chiffrage.jpg"
-             alt="Étude technique et chiffrage">
-        <div class="card-content">
-          <h3>Études & Chiffrage industriel</h3>
-          <p>
-            Évaluation technique et économique des projets
-            pour faciliter la prise de décision.
-          </p>
-          <ul>
-            <li>Chiffrage technico-économique</li>
-            <li>Analyse des coûts</li>
-            <li>Étude de faisabilité</li>
-            <li>Analyse des besoins industriels</li>
-          </ul>
-        </div>
-      </article>
-
-    </div>
+ <div class="container">
+  <div class="section-title">
+   <small>Nos compétences</small>
+   <h2>Nos domaines d'intervention</h2>
+   <p>Des prestations techniques adaptées aux besoins de l'industrie.</p>
   </div>
+  <div class="cards">
+
+   <article class="card">
+    <img src="images/conception-3d.jpg" alt="Conception mécanique 3D">
+    <div class="card-content">
+     <h3>Conception mécanique 2D / 3D</h3>
+     <p>Conception et développement de pièces, ensembles mécaniques et outillages industriels.</p>
+     <ul>
+      <li>Modélisation 3D</li>
+      <li>Mise en plan 2D</li>
+      <li>Conception d'outillages</li>
+      <li>Analyse des solutions techniques</li>
+     </ul>
+    </div>
+   </article>
+
+   <article class="card">
+    <img src="images/methodes-process.jpg" alt="Méthodes et industrialisation">
+    <div class="card-content">
+     <h3>Méthodes & Industrialisation</h3>
+     <p>Analyse et optimisation des moyens et processus de production industrielle.</p>
+     <ul>
+      <li>Études de faisabilité</li>
+      <li>Analyse des temps de fabrication</li>
+      <li>Suivi des outillages</li>
+      <li>Préparation des nouveaux projets</li>
+     </ul>
+    </div>
+   </article>
+
+   <article class="card">
+    <img src="images/etude-chiffrage.jpg" alt="Étude et chiffrage industriel">
+    <div class="card-content">
+     <h3>Études & Chiffrage industriel</h3>
+     <p>Évaluation technique et économique des projets pour faciliter la prise de décision.</p>
+     <ul>
+      <li>Chiffrage technico-économique</li>
+      <li>Analyse des coûts</li>
+      <li>Étude de faisabilité</li>
+      <li>Analyse des besoins industriels</li>
+     </ul>
+    </div>
+   </article>
+
+  </div>
+ </div>
 </section>
 
 <!-- EXPERTISE -->
-
-<section class="expertise">
-  <div class="container">
-
-    <div class="section-title">
-      <small>Notre savoir-faire</small>
-      <h2>Une expertise technique multidisciplinaire</h2>
-      <p>
-        Des outils et méthodes reconnus pour structurer
-        les projets industriels.
-      </p>
-    </div>
-
-    <div class="expertise-grid">
-
-      <div class="expertise-item">
-        <strong>CAO / DAO</strong>
-        Conception 2D et 3D
-      </div>
-
-      <div class="expertise-item">
-        <strong>Lean Manufacturing</strong>
-        Optimisation des processus
-      </div>
-
-      <div class="expertise-item">
-        <strong>AMDEC / 5S</strong>
-        Analyse et amélioration
-      </div>
-
-      <div class="expertise-item">
-        <strong>KPI / PDCA</strong>
-        Suivi de performance
-      </div>
-
-    </div>
+<section class="expertise" id="expertise">
+ <div class="container">
+  <div class="section-title">
+   <small>Notre savoir-faire</small>
+   <h2>Une expertise technique multidisciplinaire</h2>
+   <p>Des outils et méthodes reconnus pour structurer les projets industriels.</p>
   </div>
+  <div class="expertise-grid">
+   <div class="expertise-item"><strong>CAO / DAO</strong>Conception 2D et 3D</div>
+   <div class="expertise-item"><strong>Lean Manufacturing</strong>Optimisation des processus</div>
+   <div class="expertise-item"><strong>AMDEC / 5S</strong>Analyse et amélioration</div>
+   <div class="expertise-item"><strong>KPI / PDCA</strong>Suivi de performance</div>
+  </div>
+ </div>
 </section>
 
-<!-- PROJETS -->
-
+<!-- PORTFOLIO -->
 <section id="projets">
-  <div class="container">
-
-    <div class="section-title">
-      <small>Portfolio technique</small>
-      <h2>Projets & études de conception</h2>
-      <p>
-        Exemples de concepts techniques et de travaux de conception.
-        Les démonstrations ci-dessous ne constituent pas des références
-        clients réalisées.
-      </p>
-    </div>
-
-    <div class="project-grid">
-
-      <article class="project">
-        <img src="images/projet-machine.jpg"
-             alt="Concept de machine industrielle">
-        <div class="project-info">
-          <span class="demo">CONCEPT DE DÉMONSTRATION</span>
-          <h3>YB-ADH-001 – Machine d'application adhésive</h3>
-          <p>
-            Étude conceptuelle d'une machine manuelle destinée
-            à appliquer trois bandes adhésives parallèles sur
-            un support carton.
-          </p>
-        </div>
-      </article>
-
-      <article class="project">
-        <img src="images/projet-outillage.jpg"
-             alt="Conception d'un outillage mécanique">
-        <div class="project-info">
-          <span class="demo">ILLUSTRATION TECHNIQUE</span>
-          <h3>Conception d'outillages industriels</h3>
-          <p>
-            Modélisation de composants mécaniques et développement
-            de solutions adaptées aux besoins de production.
-          </p>
-        </div>
-      </article>
-
-    </div>
+ <div class="container">
+  <div class="section-title">
+   <small>Portfolio technique</small>
+   <h2>Projets & études de conception</h2>
+   <p>
+    Exemples de concepts techniques et de travaux de conception.
+    Les démonstrations ne constituent pas des références clients réalisées.
+   </p>
   </div>
+  <div class="project-grid">
+
+   <article class="project">
+    <img src="images/projet-machine.jpg" alt="Concept de machine industrielle">
+    <div class="project-info">
+     <span class="demo">CONCEPT DE DÉMONSTRATION</span>
+     <h3>YB-ADH-001 – Machine d'application adhésive</h3>
+     <p>
+      Étude conceptuelle d'une machine manuelle destinée à appliquer
+      trois bandes adhésives parallèles sur un support carton.
+     </p>
+    </div>
+   </article>
+
+   <article class="project">
+    <img src="images/projet-outillage.jpg" alt="Conception d'un outillage mécanique">
+    <div class="project-info">
+     <span class="demo">ILLUSTRATION TECHNIQUE</span>
+     <h3>Conception d'outillages industriels</h3>
+     <p>
+      Modélisation de composants mécaniques et développement
+      de solutions adaptées aux besoins de production.
+     </p>
+    </div>
+   </article>
+
+  </div>
+ </div>
 </section>
 
 <!-- METHODOLOGIE -->
-
 <section class="process">
-  <div class="container">
-
-    <div class="section-title">
-      <small>Notre démarche</small>
-      <h2>Une méthodologie structurée</h2>
-      <p>Chaque projet suit une démarche technique claire.</p>
-    </div>
-
-    <div class="steps">
-
-      <div class="step">
-        <span>01</span>
-        <h3>Analyse du besoin</h3>
-        <p>Compréhension des exigences et contraintes techniques.</p>
-      </div>
-
-      <div class="step">
-        <span>02</span>
-        <h3>Étude technique</h3>
-        <p>Analyse de faisabilité et définition des solutions.</p>
-      </div>
-
-      <div class="step">
-        <span>03</span>
-        <h3>Conception</h3>
-        <p>Développement des plans et propositions techniques.</p>
-      </div>
-
-      <div class="step">
-        <span>04</span>
-        <h3>Optimisation</h3>
-        <p>Analyse des résultats et amélioration de la solution.</p>
-      </div>
-
-    </div>
+ <div class="container">
+  <div class="section-title">
+   <small>Notre démarche</small>
+   <h2>Une méthodologie structurée</h2>
+   <p>Chaque projet suit une démarche technique claire.</p>
   </div>
+  <div class="steps">
+   <div class="step">
+    <span>01</span><h3>Analyse du besoin</h3>
+    <p>Compréhension des exigences et contraintes techniques.</p>
+   </div>
+   <div class="step">
+    <span>02</span><h3>Étude technique</h3>
+    <p>Analyse de faisabilité et définition des solutions.</p>
+   </div>
+   <div class="step">
+    <span>03</span><h3>Conception</h3>
+    <p>Développement des plans et propositions techniques.</p>
+   </div>
+   <div class="step">
+    <span>04</span><h3>Optimisation</h3>
+    <p>Analyse des résultats et amélioration de la solution.</p>
+   </div>
+  </div>
+ </div>
 </section>
 
 <!-- CONTACT -->
-
 <section class="contact" id="contact">
-  <div class="container">
-
-    <div class="section-title">
-      <small>Contact</small>
-      <h2>Parlons de votre projet industriel</h2>
-      <p>
-        Vous avez un besoin en conception, méthodes ou
-        industrialisation ? Contactez-nous.
-      </p>
-    </div>
-
-    <div class="contact-grid">
-
-      <div class="contact-info">
-        <h3>YB Industrial Solutions</h3>
-
-        <p><strong>Responsable :</strong> Yassine Belarbi</p>
-        <p><strong>Localisation :</strong> Kénitra, Maroc</p>
-        <p><strong>Zone d'intervention :</strong> Kénitra, Rabat, Casablanca et Tanger</p>
-        <p><strong>E-mail :</strong> Yassine.Belarbi.officiel@mail.com</p>
-        <p><strong>Téléphone :</strong> +212 773 11 95 52</p>
-      </div>
-
-      <div class="contact-box">
-        <h3>Contact direct</h3>
-
-        <p>Pour discuter de votre besoin technique :</p>
-
-        <a href="https://wa.me/212773119552"
-           target="_blank" rel="noopener">
-          Contacter par WhatsApp
-        </a>
-
-        <a href="mailto:Yassine.Belarbi.officiel@mail.com">
-          Envoyer un e-mail
-        </a>
-      </div>
-
-    </div>
+ <div class="container">
+  <div class="section-title">
+   <small>Contact</small>
+   <h2>Parlons de votre projet industriel</h2>
+   <p>Vous avez un besoin en conception, méthodes ou industrialisation ? Contactez-nous.</p>
   </div>
+  <div class="contact-grid">
+   <div class="contact-info">
+    <h3>YB Industrial Solutions</h3>
+    <p><strong>Responsable :</strong> Yassine Belarbi</p>
+    <p><strong>Localisation :</strong> Kénitra, Maroc</p>
+    <p><strong>Zone d'intervention :</strong> Kénitra, Rabat, Casablanca et Tanger</p>
+    <p><strong>E-mail :</strong> Yassine.Belarbi.officiel@mail.com</p>
+    <p><strong>Téléphone :</strong> +212 773 11 95 52</p>
+   </div>
+   <div class="contact-box">
+    <h3>Contact direct</h3>
+    <p>Pour discuter de votre besoin technique :</p>
+    <a href="https://wa.me/212773119552" target="_blank" rel="noopener">
+     Contacter par WhatsApp
+    </a>
+    <a href="mailto:Yassine.Belarbi.officiel@mail.com">
+     Envoyer un e-mail
+    </a>
+   </div>
+  </div>
+ </div>
 </section>
 
 <footer>
-  <p>
-    © <span id="year"></span>
-    <strong>YB Industrial Solutions</strong>
-    — Bureau d'études industrielles | Maroc
-  </p>
+ <p>© <span id="year"></span> <strong>YB Industrial Solutions</strong> — Bureau d'études industrielles | Maroc</p>
 </footer>
 
 <script>
-document.getElementById("year").textContent =
-  new Date().getFullYear();
+document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 
 </body>
