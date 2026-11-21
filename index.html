@@ -1,76 +1,969 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="YB Industrial Solutions — ingénierie industrielle, méthodes, conception 2D/3D, outillages, chiffrage et amélioration continue à Kénitra, Maroc.">
-<title>YB Industrial Solutions | Ingénierie industrielle & méthodes</title>
-<style>
-:root{--bg:#070a0e;--panel:#10161d;--panel2:#151d25;--text:#f2f4f6;--muted:#a9b4be;--line:#27323c;--gold:#d5a84d;--gold2:#f0ca73;--max:1180px}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);line-height:1.65}a{text-decoration:none;color:inherit}.wrap{width:min(var(--max),92%);margin:auto}
-header{position:sticky;top:0;z-index:30;background:rgba(7,10,14,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}.nav{height:74px;display:flex;align-items:center;justify-content:space-between}.logo{font-weight:900;letter-spacing:.06em}.logo span{color:var(--gold)}nav{display:flex;gap:21px;align-items:center}nav a{font-size:13px;color:#cbd3d9}nav a:hover{color:var(--gold2)}
-.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:5px;background:var(--gold);color:#080b0f;font-weight:800;border:1px solid var(--gold);cursor:pointer}.btn:hover{background:var(--gold2)}.btn.alt{background:transparent;color:var(--text)}
-.hero{min-height:760px;display:flex;align-items:center;position:relative;overflow:hidden;background:linear-gradient(90deg,rgba(7,10,14,.98) 0%,rgba(7,10,14,.82) 45%,rgba(7,10,14,.48) 100%),url("https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=2200&q=85") center/cover no-repeat}.hero .wrap{position:relative;z-index:1}.kicker,.eyebrow{color:var(--gold);font-size:12px;font-weight:900;letter-spacing:.16em;text-transform:uppercase}.kicker{margin-bottom:18px}h1{font-size:clamp(44px,6vw,78px);line-height:1.02;letter-spacing:-.045em;max-width:850px;margin:0 0 24px}h1 em{font-style:normal;color:var(--gold2)}.lead{font-size:20px;color:#d0d7dd;max-width:710px;margin-bottom:32px}.actions{display:flex;gap:12px;flex-wrap:wrap}.stats{display:flex;gap:34px;flex-wrap:wrap;margin-top:54px;padding-top:23px;border-top:1px solid #ffffff26}.stats strong{display:block;font-size:14px}.stats small{color:#aeb8c0}
-section{padding:100px 0}.dark{background:#0a0f14}.head{max-width:780px;margin-bottom:46px}.head h2{font-size:clamp(32px,4vw,50px);line-height:1.08;letter-spacing:-.03em;margin:9px 0 14px}.head p{color:var(--muted);font-size:17px}
-.services{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.service{overflow:hidden;background:var(--panel);border:1px solid var(--line);border-radius:10px}.service-img{height:230px;overflow:hidden}.service-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}.service:hover .service-img img{transform:scale(1.04)}.service-body{padding:27px}.num{color:var(--gold);font-size:12px;font-weight:900}.service h3{font-size:23px;margin:12px 0 8px}.service p{color:var(--muted);margin:0}.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}.tag{font-size:12px;color:#cbd3d9;border:1px solid var(--line);border-radius:20px;padding:5px 9px}
-.process{display:grid;grid-template-columns:repeat(5,1fr);border-block:1px solid var(--line)}.step{padding:27px 18px;border-right:1px solid var(--line)}.step:last-child{border-right:0}.step b{color:var(--gold)}.step h3{margin:10px 0 5px}.step p{font-size:14px;color:var(--muted)}
-.visual{display:grid;grid-template-columns:1.15fr .85fr;gap:18px}.visual-card{min-height:430px;border:1px solid var(--line);border-radius:10px;overflow:hidden;position:relative;background:var(--panel)}.visual-card img{width:100%;height:100%;object-fit:cover;display:block}.visual-overlay{position:absolute;inset:auto 0 0;padding:30px;background:linear-gradient(transparent,rgba(0,0,0,.88))}.visual-overlay h3{font-size:27px;margin:0 0 5px}.visual-overlay p{color:#c4ccd3;margin:0}.stack{display:grid;gap:18px}.stack .visual-card{min-height:206px}
-.domains{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.domain{padding:22px;background:var(--panel);border:1px solid var(--line);border-radius:8px;font-weight:700}
-.about{display:grid;grid-template-columns:1.05fr .95fr;gap:45px;align-items:start}.about p{color:var(--muted);font-size:17px}.box{background:var(--panel);border:1px solid var(--line);padding:29px;border-radius:10px}.box div{padding:13px 0;border-bottom:1px solid var(--line)}.box div:last-child{border:0}
-.contact{display:grid;grid-template-columns:1fr 1fr;gap:18px}.contact-card{background:var(--panel);border:1px solid var(--line);padding:30px;border-radius:10px}.contact-line{padding:13px 0;border-bottom:1px solid var(--line);color:#cbd3d9}.contact-line:last-child{border:0}input,select,textarea{width:100%;padding:13px;margin-bottom:10px;background:#090d12;border:1px solid var(--line);color:white;border-radius:5px;font:inherit}
-.note{margin-top:25px;color:#7f8b95;font-size:12px}.note a{text-decoration:underline}
-footer{border-top:1px solid var(--line);padding:29px 0;color:#89949e;font-size:13px}.foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
-@media(max-width:900px){nav{display:none}.services,.contact,.about,.visual{grid-template-columns:1fr}.process{grid-template-columns:1fr}.step{border-right:0;border-bottom:1px solid var(--line)}.domains{grid-template-columns:repeat(2,1fr)}.hero{min-height:690px}}
-@media(max-width:560px){section{padding:72px 0}.domains{grid-template-columns:1fr}.hero{min-height:670px}.stats{gap:18px}.service-img{height:200px}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>YB Industrial Solutions | Bureau d'études industrielles</title>
+  <meta name="description" content="YB Industrial Solutions : méthodes industrielles, industrialisation, conception mécanique 2D/3D, études de faisabilité et chiffrage industriel au Maroc.">
+  <meta name="keywords" content="bureau d'études Maroc, méthodes industrielles, conception 3D, SolidWorks, industrialisation, chiffrage industriel">
+  <meta name="author" content="YB Industrial Solutions">
+
+  <meta property="og:title" content="YB Industrial Solutions">
+  <meta property="og:description" content="Solutions techniques et ingénierie industrielle.">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy: #142D46;
+      --navy-dark: #0B1D30;
+      --turquoise: #00A6A6;
+      --light: #F4F7FA;
+      --white: #FFFFFF;
+      --text: #526174;
+      --border: #E3EAF0;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--navy);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1150px, 90%);
+      margin: auto;
+    }
+
+    .topbar {
+      background: var(--navy-dark);
+      color: #DCE7F0;
+      padding: 9px 0;
+      font-size: 12px;
+    }
+
+    .topbar .container {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    header {
+      background: white;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 3px 18px rgba(10, 30, 50, .07);
+    }
+
+    nav {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: 800;
+      letter-spacing: -1px;
+      color: var(--navy);
+    }
+
+    .logo span {
+      color: var(--turquoise);
+    }
+
+    .logo small {
+      display: block;
+      font-size: 9px;
+      letter-spacing: 3px;
+      font-weight: 600;
+      color: var(--text);
+      margin-top: -5px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 27px;
+      list-style: none;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover {
+      color: var(--turquoise);
+    }
+
+    .nav-cta, .btn {
+      display: inline-block;
+      background: var(--turquoise);
+      color: white;
+      padding: 13px 22px;
+      border-radius: 5px;
+      font-size: 13px;
+      font-weight: 700;
+      transition: .25s;
+    }
+
+    .nav-cta:hover, .btn:hover {
+      background: #008787;
+      transform: translateY(-2px);
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: 0;
+      font-size: 27px;
+      color: var(--navy);
+      cursor: pointer;
+    }
+
+    .hero {
+      background:
+        linear-gradient(90deg, rgba(11,29,48,.96), rgba(20,45,70,.82)),
+        url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=2000&q=85')
+        center/cover;
+      color: white;
+      padding: 115px 0 120px;
+      min-height: 570px;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-content {
+      max-width: 720px;
+    }
+
+    .eyebrow {
+      color: var(--turquoise);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: clamp(36px, 5.5vw, 62px);
+      line-height: 1.12;
+      letter-spacing: -2px;
+      margin-bottom: 25px;
+    }
+
+    .hero h1 span {
+      color: #35D0CA;
+    }
+
+    .hero p {
+      color: #D9E4EC;
+      font-size: 16px;
+      max-width: 610px;
+      margin-bottom: 32px;
+    }
+
+    .btn-outline {
+      display: inline-block;
+      padding: 12px 22px;
+      border: 1px solid rgba(255,255,255,.65);
+      border-radius: 5px;
+      margin-left: 10px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .btn-outline:hover {
+      background: white;
+      color: var(--navy);
+    }
+
+    .section {
+      padding: 85px 0;
+    }
+
+    .section-light {
+      background: var(--light);
+    }
+
+    .section-heading {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 48px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(28px, 4vw, 38px);
+      line-height: 1.2;
+      margin-bottom: 15px;
+      letter-spacing: -1px;
+    }
+
+    .section-heading p {
+      color: var(--text);
+      font-size: 14px;
+    }
+
+    .accent-line {
+      width: 55px;
+      height: 4px;
+      background: var(--turquoise);
+      margin: 18px auto;
+      border-radius: 4px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 23px;
+    }
+
+    .service-card {
+      background: white;
+      padding: 32px 27px;
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      transition: .25s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 15px 35px rgba(20,45,70,.10);
+      border-color: var(--turquoise);
+    }
+
+    .service-icon {
+      width: 55px;
+      height: 55px;
+      display: grid;
+      place-items: center;
+      background: #E5F7F6;
+      color: var(--turquoise);
+      border-radius: 8px;
+      font-size: 25px;
+      margin-bottom: 22px;
+    }
+
+    .service-card h3 {
+      font-size: 18px;
+      margin-bottom: 13px;
+    }
+
+    .service-card p {
+      color: var(--text);
+      font-size: 13px;
+      margin-bottom: 17px;
+    }
+
+    .service-card ul {
+      padding-left: 18px;
+      color: var(--text);
+      font-size: 12px;
+    }
+
+    .service-card li {
+      margin: 7px 0;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about-image {
+      min-height: 390px;
+      border-radius: 10px;
+      overflow: hidden;
+      background:
+        url('https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=1000&q=85')
+        center/cover;
+    }
+
+    .about-content h2 {
+      font-size: 35px;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .about-content p {
+      color: var(--text);
+      font-size: 14px;
+      margin-bottom: 17px;
+    }
+
+    .check-list {
+      list-style: none;
+      margin: 22px 0 28px;
+    }
+
+    .check-list li {
+      margin: 12px 0;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .check-list li::before {
+      content: "✓";
+      color: var(--turquoise);
+      font-weight: 800;
+      margin-right: 10px;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .project-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      overflow: hidden;
+      transition: .25s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(20,45,70,.09);
+    }
+
+    .project-image {
+      height: 220px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .project-image.one {
+      background-image: url('https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?auto=format&fit=crop&w=900&q=85');
+    }
+
+    .project-image.two {
+      background-image: url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=900&q=85');
+    }
+
+    .project-image.three {
+      background-image: url('https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=900&q=85');
+    }
+
+    .project-info {
+      padding: 23px;
+    }
+
+    .project-tag {
+      display: inline-block;
+      color: var(--turquoise);
+      background: #E5F7F6;
+      padding: 5px 9px;
+      border-radius: 3px;
+      font-size: 10px;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    .project-info h3 {
+      font-size: 17px;
+      margin-bottom: 9px;
+    }
+
+    .project-info p {
+      color: var(--text);
+      font-size: 12px;
+    }
+
+    .notice {
+      margin-top: 25px;
+      padding: 14px 18px;
+      background: #FFF8E8;
+      border-left: 4px solid #E7AD3E;
+      color: #74551A;
+      font-size: 12px;
+      border-radius: 4px;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .process-step {
+      text-align: center;
+      padding: 25px 15px;
+    }
+
+    .step-number {
+      width: 48px;
+      height: 48px;
+      margin: 0 auto 17px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: var(--navy);
+      color: white;
+      font-weight: 800;
+    }
+
+    .process-step h3 {
+      font-size: 15px;
+      margin-bottom: 8px;
+    }
+
+    .process-step p {
+      color: var(--text);
+      font-size: 12px;
+    }
+
+    .contact-section {
+      background: var(--navy-dark);
+      color: white;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 55px;
+    }
+
+    .contact-info h2 {
+      font-size: 34px;
+      line-height: 1.2;
+      margin-bottom: 18px;
+    }
+
+    .contact-info p {
+      color: #BFCBD7;
+      font-size: 14px;
+      margin-bottom: 25px;
+    }
+
+    .contact-detail {
+      margin: 20px 0;
+      color: #DDE7EF;
+      font-size: 14px;
+    }
+
+    .contact-detail strong {
+      display: block;
+      color: #35D0CA;
+      font-size: 11px;
+      letter-spacing: 1px;
+      margin-bottom: 4px;
+    }
+
+    .contact-form {
+      background: white;
+      padding: 32px;
+      border-radius: 9px;
+      color: var(--navy);
+    }
+
+    .contact-form h3 {
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 7px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      font: inherit;
+      font-size: 13px;
+      outline: none;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--turquoise);
+    }
+
+    .form-group textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    .contact-form button {
+      width: 100%;
+      border: 0;
+      cursor: pointer;
+      font: inherit;
+    }
+
+    footer {
+      background: #071522;
+      color: #AAB9C7;
+      padding: 25px 0;
+      font-size: 11px;
+    }
+
+    footer .container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    footer strong {
+      color: white;
+    }
+
+    @media (max-width: 850px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 78px;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 22px 5%;
+        flex-direction: column;
+        align-items: flex-start;
+        box-shadow: 0 10px 20px rgba(0,0,0,.08);
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-cta {
+        display: none;
+      }
+
+      .services-grid, .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .about-grid, .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 560px) {
+      .hero {
+        padding: 85px 0;
+      }
+
+      .hero h1 {
+        font-size: 39px;
+      }
+
+      .btn-outline {
+        margin: 12px 0 0;
+      }
+
+      .services-grid, .projects-grid, .process-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section {
+        padding: 65px 0;
+      }
+
+      .contact-form {
+        padding: 23px;
+      }
+
+      footer .container {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
+
 <body>
-<header><div class="wrap nav">
-<a class="logo" href="#accueil">YB <span>INDUSTRIAL</span> SOLUTIONS</a>
-<nav><a href="#services">Services</a><a href="#approche">Méthodes</a><a href="#domaines">Domaines</a><a href="#realisations">Réalisations</a><a href="#apropos">À propos</a><a href="#contact">Contact</a><a class="btn" href="#contact">Demander un devis</a></nav>
-</div></header>
 
-<main>
-<section class="hero" id="accueil"><div class="wrap">
-<div class="kicker">Industrial Engineering • Methods • Technical Solutions</div>
-<h1>Des solutions techniques pour <em>améliorer votre production.</em></h1>
-<p class="lead">YB Industrial Solutions accompagne les ateliers, PME industrielles et entreprises de fabrication dans l’optimisation des méthodes, processus et solutions techniques.</p>
-<div class="actions"><a class="btn" href="#contact">Demander un devis</a><a class="btn alt" target="_blank" rel="noopener" href="https://wa.me/212773119552?text=Bonjour%20YB%20Industrial%20Solutions%2C%20je%20souhaite%20%C3%A9changer%20sur%20un%20projet%20industriel.">WhatsApp</a></div>
-<div class="stats"><div><strong>Ingénierie industrielle</strong><small>Méthodes & solutions techniques</small></div><div><strong>Conception 2D / 3D</strong><small>Plans & préparation fabrication</small></div><div><strong>Kénitra — Maroc</strong><small>Services techniques</small></div></div>
-</div></section>
+  <div class="topbar">
+    <div class="container">
+      <span>YB INDUSTRIAL SOLUTIONS — Ingénierie & Solutions industrielles</span>
+      <span>Kénitra, Maroc | Intervention selon projet</span>
+    </div>
+  </div>
 
-<section id="services"><div class="wrap"><div class="head"><div class="eyebrow">Nos expertises</div><h2>Des prestations pensées pour le terrain industriel.</h2><p>Une approche technique, structurée et orientée vers des solutions claires et exploitables.</p></div>
-<div class="services">
-<article class="service"><div class="service-img"><img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=82" alt="Illustration de conception et ingénierie industrielle"></div><div class="service-body"><span class="num">01 — OUTILLAGE</span><h3>Organisation & suivi des outillages</h3><p>Entrées et sorties, codification, localisation, suivi de l’état, gestion du stock, historique des mouvements et tableau de bord Excel.</p><div class="tags"><span class="tag">Stock</span><span class="tag">Traçabilité</span><span class="tag">Excel</span></div></div></article>
-<article class="service"><div class="service-img"><img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=82" alt="Illustration d'atelier industriel et fabrication"></div><div class="service-body"><span class="num">02 — CHIFFRAGE</span><h3>Chiffrage & devis industriel</h3><p>Analyse de la demande, estimation matière, temps de fabrication, calcul des coûts, marge et préparation du devis.</p><div class="tags"><span class="tag">Coûts</span><span class="tag">Temps</span><span class="tag">Devis</span></div></div></article>
-<article class="service"><div class="service-img"><img src="https://images.unsplash.com/photo-1565610222536-ef125c59da2e?auto=format&fit=crop&w=1200&q=82" alt="Illustration de conception technique et fabrication"></div><div class="service-body"><span class="num">03 — CONCEPTION</span><h3>Conception 2D/3D & mise en plan</h3><p>Modélisation 3D, dessin technique 2D, cotation, modification de plans, reproduction depuis croquis et préparation fabrication.</p><div class="tags"><span class="tag">2D</span><span class="tag">3D</span><span class="tag">Cotation</span></div></div></article>
-<article class="service"><div class="service-img"><img src="https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?auto=format&fit=crop&w=1200&q=82" alt="Illustration de production industrielle et amélioration des processus"></div><div class="service-body"><span class="num">04 — MÉTHODES</span><h3>Optimisation & méthodes industrielles</h3><p>Lean Manufacturing, Kaizen, optimisation des processus, standardisation, organisation du travail et amélioration continue.</p><div class="tags"><span class="tag">Lean</span><span class="tag">Kaizen</span><span class="tag">KPI</span></div></div></article>
-</div></div></section>
+  <header>
+    <nav class="container">
+      <a href="#accueil" class="logo">
+        YB<span>.</span>
+        <small>INDUSTRIAL SOLUTIONS</small>
+      </a>
 
-<section class="dark" id="approche"><div class="wrap"><div class="head"><div class="eyebrow">Notre méthode</div><h2>De l’échange à une solution exploitable.</h2><p>Chaque intervention suit une démarche simple et structurée.</p></div>
-<div class="process"><div class="step"><b>01</b><h3>Échange</h3><p>Comprendre le besoin.</p></div><div class="step"><b>02</b><h3>Analyse</h3><p>Identifier le problème et les contraintes.</p></div><div class="step"><b>03</b><h3>Solution</h3><p>Définir la solution technique.</p></div><div class="step"><b>04</b><h3>Réalisation</h3><p>Développer plans, outils, fichiers ou documents.</p></div><div class="step"><b>05</b><h3>Livraison</h3><p>Fournir une solution claire et exploitable.</p></div></div></div></section>
+      <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu">☰</button>
 
-<section id="domaines"><div class="wrap"><div class="head"><div class="eyebrow">Secteurs d’intervention</div><h2>Au plus près des réalités de fabrication.</h2></div><div class="domains"><div class="domain">Ateliers mécaniques</div><div class="domain">Usinage CNC</div><div class="domain">Métallerie</div><div class="domain">Chaudronnerie</div><div class="domain">Maintenance industrielle</div><div class="domain">Sous-traitance industrielle</div><div class="domain">PME industrielles</div><div class="domain">Entreprises de fabrication</div></div></div></section>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#apropos">À propos</a></li>
+        <li><a href="#projets">Portfolio 3D</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
 
-<section class="dark" id="realisations"><div class="wrap"><div class="head"><div class="eyebrow">Réalisations & expertise</div><h2>Des livrables conçus pour être utilisés.</h2><p>Cette galerie utilise des images d’illustration. Remplace-les par tes propres photos dès que tu auras des réalisations YB à présenter.</p></div>
-<div class="visual">
-<div class="visual-card"><img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1600&q=85" alt="Atelier industriel - image d'illustration"><div class="visual-overlay"><h3>Fabrication & outillage</h3><p>Environnement industriel, précision et préparation de production.</p></div></div>
-<div class="stack"><div class="visual-card"><img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=82" alt="Ingénierie industrielle - image d'illustration"><div class="visual-overlay"><h3>Ingénierie & conception</h3><p>Conception technique et analyse.</p></div></div><div class="visual-card"><img src="https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?auto=format&fit=crop&w=1200&q=82" alt="Production industrielle - image d'illustration"><div class="visual-overlay"><h3>Méthodes & amélioration</h3><p>Organisation et performance des processus.</p></div></div></div>
-</div><p class="note">Images d’illustration provenant de photographies disponibles sous licence Unsplash. Pour une version commerciale finale, conserve les crédits/licences appropriés et privilégie tes propres photos de projets.</p>
-</div></section>
+      <a href="#contact" class="nav-cta">Demander un devis</a>
+    </nav>
+  </header>
 
-<section id="apropos"><div class="wrap about"><div><div class="eyebrow">À propos</div><h2>Une approche industrielle orientée terrain.</h2><p>YB Industrial Solutions propose des services techniques en ingénierie industrielle et méthodes, avec une approche centrée sur l’analyse du besoin, l’optimisation des processus et la mise en œuvre de solutions concrètes.</p><p>Notre objectif : fournir des livrables clairs, structurés et directement exploitables selon les exigences de chaque projet.</p></div><div class="box"><div><strong>Ingénierie industrielle</strong><br><span style="color:#a9b4be">Méthodes & excellence opérationnelle</span></div><div><strong>Conception technique</strong><br><span style="color:#a9b4be">2D / 3D & mise en plan</span></div><div><strong>Solutions terrain</strong><br><span style="color:#a9b4be">Adaptées aux besoins du projet</span></div><div><strong>Localisation</strong><br><span style="color:#a9b4be">Kénitra, Maroc</span></div></div></div></section>
+  <main>
+    <section class="hero" id="accueil">
+      <div class="container">
+        <div class="hero-content">
+          <div class="eyebrow">Ingénierie industrielle au Maroc</div>
+          <h1>Des solutions techniques pour <span>l'industrie de demain.</span></h1>
+          <p>
+            YB Industrial Solutions accompagne les besoins industriels
+            à travers les méthodes, l'industrialisation, la conception
+            mécanique et l'optimisation des processus.
+          </p>
+          <a href="#services" class="btn">Découvrir nos services</a>
+          <a href="#contact" class="btn-outline">Nous contacter</a>
+        </div>
+      </div>
+    </section>
 
-<section class="dark" id="contact"><div class="wrap"><div class="head"><div class="eyebrow">Contact</div><h2>Parlons de votre projet industriel.</h2><p>Décrivez votre besoin pour échanger sur la solution technique adaptée.</p></div><div class="contact">
-<div class="contact-card"><h3>YB Industrial Solutions</h3><div class="contact-line">Kénitra, Maroc</div><div class="contact-line">0773 11 95 52</div><div class="contact-line">Yassine.Belarbi.officiel@mail.com</div><div class="contact-line"><a class="btn" target="_blank" rel="noopener" href="https://wa.me/212773119552?text=Bonjour%20YB%20Industrial%20Solutions%2C%20je%20souhaite%20demander%20un%20devis.">Écrire sur WhatsApp</a></div></div>
-<div class="contact-card"><h3>Demande de devis</h3><form onsubmit="sendWA(event)"><input id="nom" required placeholder="Nom / Entreprise"><select id="service"><option>Chiffrage & devis industriel</option><option>Conception 2D/3D</option><option>Conception d’outillages</option><option>Organisation & suivi outillage</option><option>Optimisation & méthodes industrielles</option></select><textarea id="besoin" required rows="5" placeholder="Décrivez votre besoin"></textarea><button class="btn" type="submit">Envoyer la demande</button></form></div>
-</div></div></section>
-</main>
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">Nos expertises</div>
+          <h2>Nos services industriels</h2>
+          <div class="accent-line"></div>
+          <p>
+            Des prestations techniques adaptées aux besoins des entreprises
+            industrielles, ateliers et unités de production.
+          </p>
+        </div>
 
-<footer><div class="wrap foot"><div>© <span id="year"></span> YB Industrial Solutions</div><div>Industrial Engineering • Methods • Technical Solutions</div></div></footer>
-<script>
-document.getElementById('year').textContent=new Date().getFullYear();
-function sendWA(e){e.preventDefault();const n=document.getElementById('nom').value,s=document.getElementById('service').value,b=document.getElementById('besoin').value;const m='Bonjour YB Industrial Solutions,%0A%0AJe suis : '+encodeURIComponent(n)+'%0AService : '+encodeURIComponent(s)+'%0ABesoin : '+encodeURIComponent(b)+'%0A%0AJe souhaite échanger sur ce projet.';window.open('https://wa.me/212773119552?text='+m,'_blank')}
-</script>
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-icon">⚙</div>
+            <h3>Méthodes & Industrialisation</h3>
+            <p>Préparation et optimisation des processus de fabrication.</p>
+            <ul>
+              <li>Études de faisabilité industrielle</li>
+              <li>Analyse des temps de fabrication</li>
+              <li>Optimisation des processus</li>
+              <li>Documentation technique</li>
+              <li>Amélioration continue et Lean</li>
+            </ul>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">▦</div>
+            <h3>Conception mécanique 2D/3D</h3>
+            <p>Développement de solutions mécaniques et d'outillages.</p>
+            <ul>
+              <li>Conception sur SolidWorks</li>
+              <li>Plans techniques 2D</li>
+              <li>Modélisation 3D</li>
+              <li>Conception d'outillages</li>
+              <li>Optimisation de pièces techniques</li>
+            </ul>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">▤</div>
+            <h3>Chiffrage & Analyse des coûts</h3>
+            <p>Évaluation technique et économique des projets industriels.</p>
+            <ul>
+              <li>Calcul des coûts de fabrication</li>
+              <li>Étude des besoins en matière</li>
+              <li>Analyse des temps opératoires</li>
+              <li>Estimation des moyens nécessaires</li>
+              <li>Préparation de devis techniques</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-light" id="apropos">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-image" role="img" aria-label="Environnement industriel et technique"></div>
+
+          <div class="about-content">
+            <div class="eyebrow">À propos de YB</div>
+            <h2>La technique au service de la performance industrielle.</h2>
+            <p>
+              YB Industrial Solutions est un projet de bureau d'études
+              et de services techniques industriels en développement au Maroc.
+            </p>
+            <p>
+              Notre approche associe analyse technique, conception mécanique,
+              méthodes industrielles et recherche de solutions adaptées
+              aux contraintes de production.
+            </p>
+
+            <ul class="check-list">
+              <li>Approche orientée terrain et production</li>
+              <li>Solutions adaptées aux besoins du projet</li>
+              <li>Conception et documentation technique</li>
+              <li>Optimisation des coûts et des processus</li>
+            </ul>
+
+            <a href="#contact" class="btn">Parlons de votre projet</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projets">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">Conception & développement</div>
+          <h2>Portfolio technique 2D / 3D</h2>
+          <div class="accent-line"></div>
+          <p>
+            Exemples de domaines d'étude et de conception pouvant être
+            développés dans le cadre de projets industriels.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-image one"></div>
+            <div class="project-info">
+              <span class="project-tag">ÉTUDE MÉCANIQUE</span>
+              <h3>Conception d'outillages industriels</h3>
+              <p>
+                Étude de solutions mécaniques, conception de composants
+                et préparation de plans techniques.
+              </p>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-image two"></div>
+            <div class="project-info">
+              <span class="project-tag">MÉTHODES</span>
+              <h3>Optimisation d'un processus</h3>
+              <p>
+                Analyse des opérations, identification des améliorations
+                et structuration du processus de fabrication.
+              </p>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-image three"></div>
+            <div class="project-info">
+              <span class="project-tag">CHIFFRAGE</span>
+              <h3>Étude technico-économique</h3>
+              <p>
+                Analyse des temps, des ressources et des coûts
+                pour préparer une estimation industrielle.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div class="notice">
+          <strong>Note :</strong> les éléments présentés dans cette rubrique
+          illustrent les domaines d'intervention et ne constituent pas
+          des références de réalisations clients.
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-light">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">Notre approche</div>
+          <h2>Comment nous travaillons</h2>
+          <div class="accent-line"></div>
+          <p>Une démarche structurée, de l'analyse du besoin à la proposition technique.</p>
+        </div>
+
+        <div class="process-grid">
+          <div class="process-step">
+            <div class="step-number">01</div>
+            <h3>Analyse du besoin</h3>
+            <p>Compréhension du projet et des contraintes techniques.</p>
+          </div>
+
+          <div class="process-step">
+            <div class="step-number">02</div>
+            <h3>Étude technique</h3>
+            <p>Analyse de faisabilité et définition de la solution.</p>
+          </div>
+
+          <div class="process-step">
+            <div class="step-number">03</div>
+            <h3>Développement</h3>
+            <p>Conception, calculs, plans et documentation.</p>
+          </div>
+
+          <div class="process-step">
+            <div class="step-number">04</div>
+            <h3>Livraison</h3>
+            <p>Présentation des livrables et accompagnement technique.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-info">
+            <div class="eyebrow">Contact</div>
+            <h2>Vous avez un projet industriel ?</h2>
+            <p>
+              Décrivez votre besoin. Nous pourrons échanger sur
+              les possibilités d'étude et de collaboration.
+            </p>
+
+            <div class="contact-detail">
+              <strong>LOCALISATION</strong>
+              Kénitra, Maroc
+            </div>
+
+            <div class="contact-detail">
+              <strong>EMAIL</strong>
+              Yassine.Belarbi.officiel@mail.com
+            </div>
+
+            <div class="contact-detail">
+              <strong>TÉLÉPHONE / WHATSAPP</strong>
+              +212 773 11 95 52
+            </div>
+
+            <div class="contact-detail">
+              <strong>ZONES D'INTERVENTION</strong>
+              Kénitra · Rabat · Casablanca · Tanger
+            </div>
+          </div>
+
+          <form class="contact-form" id="contactForm">
+            <h3>Envoyer une demande</h3>
+
+            <div class="form-group">
+              <label for="name">Nom et prénom</label>
+              <input id="name" type="text" placeholder="Votre nom" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Adresse e-mail</label>
+              <input id="email" type="email" placeholder="Votre e-mail" required>
+            </div>
+
+            <div class="form-group">
+              <label for="service">Service recherché</label>
+              <select id="service" required>
+                <option value="">Choisir un service</option>
+                <option>Méthodes & Industrialisation</option>
+                <option>Conception mécanique 2D/3D</option>
+                <option>Chiffrage & Analyse des coûts</option>
+                <option>Autre demande</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Description du projet</label>
+              <textarea id="message" placeholder="Décrivez votre besoin..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn">Envoyer via WhatsApp</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div><strong>YB INDUSTRIAL SOLUTIONS</strong> — Ingénierie industrielle</div>
+      <div>© <span id="year"></span> YB Industrial Solutions. Tous droits réservés.</div>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+      });
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const service = document.getElementById('service').value;
+      const message = document.getElementById('message').value.trim();
+
+      const text = `Bonjour YB Industrial Solutions,
+
+Nom : ${name}
+Email : ${email}
+Service : ${service}
+
+Description du projet :
+${message}`;
+
+      const whatsappNumber = '212773115952';
+      const whatsappURL = 'https://wa.me/' + whatsappNumber + '?text=' + encodeURIComponent(text);
+
+      window.open(whatsappURL, '_blank', 'noopener,noreferrer');
+    });
+  </script>
+
 </body>
 </html>
