@@ -4,354 +4,379 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>YB Industrial Solutions | Bureau d'études industrielles Maroc</title>
-<meta name="description" content="YB Industrial Solutions accompagne les industriels en conception mécanique 2D/3D, méthodes, industrialisation, faisabilité et chiffrage au Maroc.">
-<meta name="keywords" content="YB Industrial Solutions, bureau études industriel, conception 3D, SolidWorks, méthodes industrielles, industrialisation Maroc">
-<meta name="author" content="YB Industrial Solutions">
+<meta name="description" content="YB Industrial Solutions - Bureau d'études industriel : conception mécanique 2D/3D, méthodes, industrialisation, études de faisabilité et optimisation des processus au Maroc.">
+<meta name="theme-color" content="#10263d">
+<title>YB Industrial Solutions | Bureau d'études industriel</title>
 
 <style>
 :root {
-  --navy:#10283f;
-  --navy2:#183c59;
-  --turquoise:#00b5ad;
+  --navy:#10263d;
+  --navy2:#183b55;
+  --turquoise:#00b7ad;
   --light:#f3f7fa;
   --white:#fff;
-  --text:#263849;
-  --muted:#687b8c;
+  --text:#26394b;
+  --muted:#718092;
 }
-*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
-body{font-family:Arial,Helvetica,sans-serif;color:var(--text);line-height:1.6}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;color:var(--text);line-height:1.65}
 a{text-decoration:none;color:inherit}
-img{display:block;width:100%;object-fit:cover}
 .container{width:min(1160px,92%);margin:auto}
-header{background:var(--navy);color:white;position:sticky;top:0;z-index:100}
-.navbar{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-.logo{font-size:23px;font-weight:800;letter-spacing:1px}
+header{background:var(--navy);color:white;position:sticky;top:0;z-index:10;box-shadow:0 4px 20px #0002}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-size:22px;font-weight:800;letter-spacing:1px}
 .logo span{color:var(--turquoise)}
-nav{display:flex;gap:22px;align-items:center;flex-wrap:wrap}
-nav a{font-size:14px;color:#e1ebf3}
+nav{display:flex;gap:25px;align-items:center}
+nav a{font-size:14px;color:#e5edf4}
 nav a:hover{color:var(--turquoise)}
-.nav-contact{background:var(--turquoise);padding:10px 16px;border-radius:5px;color:white}
-.hero{
- min-height:590px;display:flex;align-items:center;color:white;
- background:linear-gradient(90deg,rgba(9,29,47,.96),rgba(9,29,47,.70)),
- url("images/hero-industrie.jpg") center/cover no-repeat;
-}
-.hero-content{max-width:760px;padding:90px 0}
-.eyebrow{color:var(--turquoise);font-size:13px;font-weight:bold;letter-spacing:3px;text-transform:uppercase}
-.hero h1{font-size:clamp(36px,5vw,61px);line-height:1.12;margin:22px 0}
-.hero h1 span{color:var(--turquoise)}
-.hero p{color:#d4e0e9;font-size:17px;max-width:650px;margin-bottom:30px}
-.btn{display:inline-block;padding:14px 22px;border-radius:5px;font-weight:bold;margin:5px 7px 5px 0;transition:.3s}
-.btn:hover{transform:translateY(-3px)}
-.btn-primary{background:var(--turquoise);color:white}
-.btn-outline{border:1px solid #ffffff80;color:white}
-section{padding:85px 0}
-.section-title{text-align:center;margin-bottom:45px}
-.section-title small{color:var(--turquoise);font-weight:bold;letter-spacing:2px;text-transform:uppercase}
-.section-title h2{font-size:clamp(27px,4vw,39px);color:var(--navy);margin:10px 0}
-.section-title p{color:var(--muted);max-width:720px;margin:auto}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
-.about-image img{height:390px;border-radius:10px;background:#e5edf2}
-.about-text h2{font-size:34px;color:var(--navy);margin:12px 0 20px}
-.about-text p{color:var(--muted);margin-bottom:15px}
-.services,.process{background:var(--light)}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:25px}
-.card{background:white;border-radius:9px;overflow:hidden;box-shadow:0 8px 28px #10283f0d;transition:.3s}
-.card:hover{transform:translateY(-6px)}
-.card img{height:225px;background:#e5edf2}
-.card-content{padding:25px}
-.card h3{color:var(--navy);font-size:20px;margin-bottom:12px}
-.card p,.card li{color:var(--muted);font-size:14px}
-.card ul{padding-left:18px;margin-top:14px}
+.menu{display:none;background:none;border:0;color:white;font-size:27px}
+.hero{background:linear-gradient(115deg,#10263df2,#183b55e8),radial-gradient(circle at 80% 20%,#00b7ad55,transparent 40%);color:white;padding:95px 0 85px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:45px}
+.eyebrow{color:#56e0d4;text-transform:uppercase;letter-spacing:3px;font-size:12px;font-weight:bold}
+h1{font-size:clamp(36px,5vw,58px);line-height:1.12;margin:18px 0}
+.hero p{color:#d7e3ec;font-size:17px;max-width:600px}
+.actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+.btn{display:inline-block;padding:13px 23px;border-radius:5px;font-weight:bold;font-size:14px}
+.btn-primary{background:var(--turquoise);color:#062c35}
+.btn-outline{border:1px solid #b8d0dc;color:white}
+.hero-art{background:linear-gradient(145deg,#214b62,#0d263c);border:1px solid #527487;border-radius:15px;padding:14px;box-shadow:0 20px 55px #0005}
+.hero-art svg{width:100%;display:block}
+section{padding:82px 0}
+.section-head{text-align:center;max-width:720px;margin:0 auto 42px}
+.section-head .eyebrow{color:#009e98}
+h2{font-size:clamp(28px,4vw,38px);color:var(--navy);line-height:1.2;margin:10px 0}
+.section-head p{color:var(--muted)}
+.about{background:var(--light)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+.about-art{background:#e2edf1;border-radius:12px;padding:20px}
+.about-art svg{width:100%;display:block}
+.about h2{margin-bottom:18px}
+.about p{margin-bottom:14px;color:#617183}
+.checks{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}
+.check{font-weight:bold;font-size:14px;color:var(--navy)}
+.check:before{content:"✓";color:var(--turquoise);margin-right:9px}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.service{border:1px solid #e1e8ed;border-radius:10px;padding:26px;background:white;transition:.25s}
+.service:hover{transform:translateY(-5px);box-shadow:0 14px 35px #10263d13}
+.service svg{width:100%;height:150px;background:#eff5f7;border-radius:7px;margin-bottom:20px}
+.service h3{color:var(--navy);font-size:19px;margin-bottom:10px}
+.service p{font-size:14px;color:var(--muted)}
+.service ul{padding-left:18px;margin-top:14px;font-size:13px;color:#536678}
 .expertise{background:var(--navy);color:white}
-.expertise .section-title h2{color:white}
-.expertise .section-title p{color:#c1d0dc}
-.expertise-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-.expertise-item{border:1px solid #ffffff25;padding:28px 18px;border-radius:8px;text-align:center}
-.expertise-item strong{display:block;color:var(--turquoise);font-size:18px;margin-bottom:8px}
-.project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
-.project{border-radius:9px;overflow:hidden;background:var(--light)}
-.project img{height:290px;background:#e5edf2}
-.project-info{padding:23px}
-.project-info h3{color:var(--navy);margin-bottom:8px}
+.expertise .section-head h2{color:white}
+.expertise .section-head p{color:#b9cbd8}
+.expertise-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.expertise-item{border:1px solid #466176;border-radius:9px;padding:23px}
+.expertise-item strong{color:#52ded2;font-size:28px}
+.expertise-item h3{font-size:16px;margin:9px 0}
+.expertise-item p{font-size:13px;color:#c0d0dc}
+.portfolio{background:#f4f7f9}
+.projects{display:grid;grid-template-columns:1fr 1fr;gap:25px}
+.project{background:white;border-radius:10px;overflow:hidden;box-shadow:0 8px 25px #10263d0d}
+.project-art{background:#dfeaf0;padding:16px}
+.project-art svg{width:100%;display:block}
+.project-info{padding:24px}
+.project-info h3{color:var(--navy);margin-bottom:7px}
 .project-info p{color:var(--muted);font-size:14px}
-.demo{display:inline-block;background:#d9f5f2;color:#087c75;font-size:11px;font-weight:bold;padding:5px 9px;border-radius:4px;margin-bottom:12px}
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-.step{background:white;padding:25px;border-radius:8px;border-top:4px solid var(--turquoise)}
-.step span{font-size:30px;color:var(--turquoise);font-weight:bold}
-.step h3{color:var(--navy);margin:12px 0}
-.step p{color:var(--muted);font-size:14px}
+.tag{display:inline-block;background:#e1f7f5;color:#087f79;padding:5px 10px;border-radius:20px;font-size:11px;font-weight:bold;margin-top:13px}
+.method-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.step{text-align:center;padding:15px}
+.step-num{width:48px;height:48px;background:var(--turquoise);color:#07333a;border-radius:50%;display:grid;place-items:center;font-size:19px;font-weight:bold;margin:0 auto 15px}
+.step h3{color:var(--navy);font-size:17px;margin-bottom:7px}
+.step p{font-size:13px;color:var(--muted)}
 .contact{background:var(--navy);color:white}
-.contact .section-title h2{color:white}
-.contact .section-title p{color:#cbd8e2}
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
-.contact-info h3{color:var(--turquoise);margin-bottom:20px}
-.contact-info p{margin:14px 0;color:#e0e9ef}
-.contact-box{background:white;color:var(--text);border-radius:8px;padding:28px}
-.contact-box h3{color:var(--navy);margin-bottom:15px}
-.contact-box a{display:block;padding:14px;background:var(--light);border-radius:5px;margin-top:12px;color:var(--navy);font-weight:bold}
-.contact-box a:hover{background:#d9f5f2}
-footer{background:#091c2d;color:#c2d0dc;text-align:center;padding:25px 10px;font-size:13px}
-footer strong{color:var(--turquoise)}
-@media(max-width:850px){
- .navbar{flex-direction:column;padding:16px 0}
- nav{justify-content:center;gap:13px}
- .about-grid,.contact-grid{grid-template-columns:1fr}
- .cards{grid-template-columns:1fr 1fr}
- .expertise-grid,.steps{grid-template-columns:1fr 1fr}
+.contact .section-head h2{color:white}
+.contact .section-head p{color:#bfd0dc}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px}
+.contact-card{background:#1a3b53;border:1px solid #3b5c70;padding:28px;border-radius:10px}
+.contact-card h3{margin-bottom:17px;color:#5de0d5}
+.contact-line{padding:12px 0;border-bottom:1px solid #ffffff20;color:#e1edf4}
+.contact-line strong{display:block;color:white;font-size:13px}
+.contact-line a{color:#64e1d7}
+.contact-note{font-size:13px;color:#c0d0dc;margin-top:17px}
+footer{background:#091a2a;color:#aabac7;text-align:center;padding:25px;font-size:13px}
+footer strong{color:#5de0d5}
+@media(max-width:800px){
+ nav{display:none;position:absolute;top:76px;left:0;width:100%;background:var(--navy);padding:20px;flex-direction:column}
+ nav.open{display:flex}
+ .menu{display:block}
+ .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
+ .hero{padding:65px 0}
+ .services-grid{grid-template-columns:1fr 1fr}
+ .expertise-grid,.method-grid{grid-template-columns:1fr 1fr}
 }
-@media(max-width:560px){
- .cards,.project-grid,.expertise-grid,.steps{grid-template-columns:1fr}
+@media(max-width:520px){
+ .services-grid,.projects{grid-template-columns:1fr}
+ .expertise-grid,.method-grid{grid-template-columns:1fr 1fr}
+ .checks{grid-template-columns:1fr}
  section{padding:60px 0}
- .hero{min-height:500px}
- nav a{font-size:12px}
 }
 </style>
 </head>
 
 <body>
-
 <header>
- <div class="container navbar">
-  <a href="#accueil" class="logo">YB <span>INDUSTRIAL SOLUTIONS</span></a>
+ <div class="container nav">
+  <a class="logo" href="#accueil">YB <span>INDUSTRIAL</span></a>
+  <button class="menu" onclick="document.querySelector('nav').classList.toggle('open')" aria-label="Ouvrir le menu">☰</button>
   <nav>
    <a href="#accueil">Accueil</a>
    <a href="#apropos">À propos</a>
    <a href="#services">Services</a>
-   <a href="#expertise">Expertise</a>
    <a href="#projets">Projets</a>
-   <a href="#contact" class="nav-contact">Contact</a>
+   <a href="#contact">Contact</a>
   </nav>
  </div>
 </header>
 
-<!-- ACCUEIL -->
+<main>
 <section class="hero" id="accueil">
- <div class="container">
-  <div class="hero-content">
-   <div class="eyebrow">Bureau d'études industrielles</div>
-   <h1>L'ingénierie au service de la <span>performance industrielle</span></h1>
-   <p>
-    YB Industrial Solutions accompagne les entreprises dans leurs
-    projets de conception mécanique, méthodes industrielles,
-    industrialisation et optimisation des processus.
-   </p>
-   <a href="#services" class="btn btn-primary">Découvrir nos services</a>
-   <a href="#contact" class="btn btn-outline">Demander une étude</a>
+ <div class="container hero-grid">
+  <div>
+   <div class="eyebrow">Bureau d'études & solutions industrielles</div>
+   <h1>Transformons vos idées en <span style="color:#54ded3">solutions industrielles.</span></h1>
+   <p>YB Industrial Solutions accompagne les entreprises dans la conception mécanique, les méthodes industrielles, l'industrialisation et l'amélioration des processus de production.</p>
+   <div class="actions">
+    <a class="btn btn-primary" href="#services">Découvrir nos services</a>
+    <a class="btn btn-outline" href="#contact">Nous contacter</a>
+   </div>
+  </div>
+  <div class="hero-art">
+   <svg viewBox="0 0 600 400" role="img" aria-label="Illustration d'une usine industrielle avec convoyeur et équipements">
+    <defs>
+     <linearGradient id="factory" x2="0" y2="1"><stop stop-color="#42738a"/><stop offset="1" stop-color="#17384f"/></linearGradient>
+     <linearGradient id="belt" x2="0" y2="1"><stop stop-color="#8aa7b5"/><stop offset="1" stop-color="#3d6478"/></linearGradient>
+    </defs>
+    <path d="M35 330V160l110-65v65l105-65v65l100-65v235Z" fill="url(#factory)" stroke="#80a9b9" stroke-width="3"/>
+    <path d="M70 190h65v55H70zm100-35h65v90h-65zm105-5h45v95h-45z" fill="#102a40" stroke="#56d7ce" stroke-width="3"/>
+    <path d="M35 330h390" stroke="#a8c7d1" stroke-width="7"/>
+    <path d="M400 330V170h65v160" fill="#214b62" stroke="#7ca9ba" stroke-width="3"/>
+    <path d="M430 170V110h15V70h30v100" fill="#214b62" stroke="#7ca9ba" stroke-width="3"/>
+    <path d="M85 300h360" stroke="#00b7ad" stroke-width="5"/>
+    <g fill="#a9c4ce" stroke="#d6e6e9" stroke-width="2">
+     <rect x="115" y="260" width="65" height="38" rx="4"/>
+     <rect x="215" y="260" width="65" height="38" rx="4"/>
+     <rect x="315" y="260" width="65" height="38" rx="4"/>
+    </g>
+    <g fill="#00b7ad"><circle cx="125" cy="315" r="9"/><circle cx="170" cy="315" r="9"/><circle cx="225" cy="315" r="9"/><circle cx="270" cy="315" r="9"/><circle cx="325" cy="315" r="9"/><circle cx="370" cy="315" r="9"/></g>
+    <path d="M470 280h80M510 280v-75h-30v-30h65" stroke="#70a3b5" stroke-width="9" fill="none"/>
+    <circle cx="480" cy="165" r="13" fill="#00b7ad"/>
+    <path d="M480 165l-22-30m22 30 28-28m-28 28 20 38" stroke="#00b7ad" stroke-width="9" stroke-linecap="round"/>
+    <path d="M40 355h510" stroke="#65899b" stroke-width="2" stroke-dasharray="8 8"/>
+    <text x="40" y="45" fill="#bdece8" font-size="17" font-weight="bold" letter-spacing="3">INDUSTRY 4.0</text>
+   </svg>
   </div>
  </div>
 </section>
 
-<!-- PRESENTATION -->
-<section id="apropos">
+<section class="about" id="apropos">
  <div class="container about-grid">
-  <div class="about-image">
-   <img src="images/bureau-etudes.jpg" alt="Bureau d'études industriel">
+  <div class="about-art">
+   <svg viewBox="0 0 520 370" role="img" aria-label="Illustration technique d'un modèle mécanique en trois dimensions">
+    <defs><linearGradient id="metal" x2="1" y2="1"><stop stop-color="#a8c4cf"/><stop offset="1" stop-color="#52798d"/></linearGradient></defs>
+    <path d="M65 275 260 165l190 105-190 105Z" fill="#c1d4dc"/>
+    <path d="M65 275v-95l195-110v95Z" fill="#547d91"/>
+    <path d="M260 165V70l190 105v95Z" fill="#789aaa"/>
+    <path d="M110 238v-63l40-22v62zm70-40v-62l40-22v62z" fill="#183e56" stroke="#00b7ad" stroke-width="3"/>
+    <path d="M270 145v-50l100 56v50" fill="#193c53" stroke="#00b7ad" stroke-width="3"/>
+    <path d="M285 255v-85m55 116v-85m55 115v-85" stroke="#234a61" stroke-width="9"/>
+    <path d="M270 255h150" stroke="#00b7ad" stroke-width="5"/>
+    <path d="M70 305h370" stroke="#7b9cab" stroke-width="2" stroke-dasharray="6 6"/>
+    <g fill="#00b7ad"><circle cx="110" cy="175" r="6"/><circle cx="220" cy="115" r="6"/><circle cx="370" cy="150" r="6"/></g>
+    <text x="70" y="40" font-size="15" fill="#173e55" font-weight="bold">CONCEPTION MÉCANIQUE 3D</text>
+   </svg>
   </div>
-  <div class="about-text">
+  <div>
    <div class="eyebrow">Qui sommes-nous ?</div>
-   <h2>Une approche technique orientée résultats</h2>
-   <p>
-    YB Industrial Solutions est un projet de bureau d'études
-    spécialisé dans les solutions techniques et industrielles.
-   </p>
-   <p>
-    Notre approche associe conception mécanique, analyse des
-    processus, étude de faisabilité et amélioration continue
-    afin de répondre aux besoins techniques des industriels.
-   </p>
-   <p>
-    Nous accompagnons les projets de l'analyse du besoin jusqu'à
-    la proposition d'une solution technique adaptée.
-   </p>
-   <a href="#contact" class="btn btn-primary">Parlons de votre projet</a>
+   <h2>Une approche technique orientée performance.</h2>
+   <p>YB Industrial Solutions est un projet de bureau d'études et de services techniques dédié à l'industrie. Notre approche associe analyse technique, conception et optimisation des moyens de production.</p>
+   <p>Nous accompagnons les besoins industriels depuis l'étude initiale jusqu'à la définition de solutions techniques adaptées aux contraintes de fabrication.</p>
+   <div class="checks">
+    <div class="check">Conception mécanique 2D/3D</div>
+    <div class="check">Méthodes industrielles</div>
+    <div class="check">Études de faisabilité</div>
+    <div class="check">Amélioration continue</div>
+   </div>
   </div>
  </div>
 </section>
 
-<!-- SERVICES -->
-<section class="services" id="services">
+<section id="services">
  <div class="container">
-  <div class="section-title">
-   <small>Nos compétences</small>
-   <h2>Nos domaines d'intervention</h2>
-   <p>Des prestations techniques adaptées aux besoins de l'industrie.</p>
+  <div class="section-head">
+   <div class="eyebrow">Nos compétences</div>
+   <h2>Nos services industriels</h2>
+   <p>Des prestations techniques pour accompagner vos projets, vos équipements et vos processus de fabrication.</p>
   </div>
-  <div class="cards">
-
-   <article class="card">
-    <img src="images/conception-3d.jpg" alt="Conception mécanique 3D">
-    <div class="card-content">
-     <h3>Conception mécanique 2D / 3D</h3>
-     <p>Conception et développement de pièces, ensembles mécaniques et outillages industriels.</p>
-     <ul>
-      <li>Modélisation 3D</li>
-      <li>Mise en plan 2D</li>
-      <li>Conception d'outillages</li>
-      <li>Analyse des solutions techniques</li>
-     </ul>
-    </div>
+  <div class="services-grid">
+   <article class="service">
+    <svg viewBox="0 0 300 150" role="img" aria-label="Illustration de conception mécanique">
+     <path d="M45 110 145 45l110 60-105 35Z" fill="#9ab9c7"/>
+     <path d="M45 110V65l100-60v40Z" fill="#527b91"/>
+     <path d="M145 45V5l110 60v40Z" fill="#7297a8"/>
+     <circle cx="150" cy="80" r="25" fill="#173e55" stroke="#00b7ad" stroke-width="5"/>
+     <circle cx="150" cy="80" r="8" fill="#a9cbd4"/>
+     <path d="M150 55v-20m0 90v-20m-25-25h-20m90 0h-20" stroke="#00b7ad" stroke-width="4"/>
+    </svg>
+    <h3>Conception mécanique 2D/3D</h3>
+    <p>Conception et modélisation de pièces, assemblages et solutions mécaniques adaptées aux besoins de production.</p>
+    <ul><li>Modélisation 3D</li><li>Plans techniques 2D</li><li>Outillages et pièces spécifiques</li></ul>
    </article>
-
-   <article class="card">
-    <img src="images/methodes-process.jpg" alt="Méthodes et industrialisation">
-    <div class="card-content">
-     <h3>Méthodes & Industrialisation</h3>
-     <p>Analyse et optimisation des moyens et processus de production industrielle.</p>
-     <ul>
-      <li>Études de faisabilité</li>
-      <li>Analyse des temps de fabrication</li>
-      <li>Suivi des outillages</li>
-      <li>Préparation des nouveaux projets</li>
-     </ul>
-    </div>
+   <article class="service">
+    <svg viewBox="0 0 300 150" role="img" aria-label="Illustration d'une ligne de production">
+     <path d="M25 110h250" stroke="#557e92" stroke-width="9"/>
+     <g fill="#183f56" stroke="#00b7ad" stroke-width="3">
+      <rect x="35" y="60" width="55" height="45" rx="4"/><rect x="120" y="42" width="55" height="63" rx="4"/><rect x="205" y="60" width="55" height="45" rx="4"/>
+     </g>
+     <g fill="#a8c4cf"><circle cx="50" cy="118" r="9"/><circle cx="80" cy="118" r="9"/><circle cx="135" cy="118" r="9"/><circle cx="165" cy="118" r="9"/><circle cx="220" cy="118" r="9"/><circle cx="250" cy="118" r="9"/></g>
+     <path d="M62 60V35h100V42m-15-7 15 0-7-8" fill="none" stroke="#00a99f" stroke-width="4"/>
+    </svg>
+    <h3>Méthodes & industrialisation</h3>
+    <p>Préparation et optimisation des moyens de production, analyse des opérations et accompagnement des nouveaux projets.</p>
+    <ul><li>Étude de faisabilité</li><li>Industrialisation</li><li>Suivi des moyens et outillages</li></ul>
    </article>
-
-   <article class="card">
-    <img src="images/etude-chiffrage.jpg" alt="Étude et chiffrage industriel">
-    <div class="card-content">
-     <h3>Études & Chiffrage industriel</h3>
-     <p>Évaluation technique et économique des projets pour faciliter la prise de décision.</p>
-     <ul>
-      <li>Chiffrage technico-économique</li>
-      <li>Analyse des coûts</li>
-      <li>Étude de faisabilité</li>
-      <li>Analyse des besoins industriels</li>
-     </ul>
-    </div>
+   <article class="service">
+    <svg viewBox="0 0 300 150" role="img" aria-label="Illustration de contrôle et optimisation des coûts">
+     <rect x="65" y="15" width="170" height="120" rx="8" fill="#d4e4e9" stroke="#547b8e" stroke-width="3"/>
+     <path d="M95 105V75h25v30m15 0V48h25v57m15 0V30h25v75" fill="#00b7ad"/>
+     <path d="M90 115h130" stroke="#52788d" stroke-width="3"/>
+     <path d="M95 55l38-18 35 5 35-25" fill="none" stroke="#173e55" stroke-width="4"/>
+     <circle cx="203" cy="17" r="5" fill="#173e55"/>
+    </svg>
+    <h3>Études & chiffrage</h3>
+    <p>Analyse technico-économique des solutions, estimation des coûts et étude des temps de fabrication.</p>
+    <ul><li>Chiffrage industriel</li><li>Analyse temps et coûts</li><li>Comparaison de solutions</li></ul>
    </article>
-
   </div>
  </div>
 </section>
 
-<!-- EXPERTISE -->
-<section class="expertise" id="expertise">
+<section class="expertise">
  <div class="container">
-  <div class="section-title">
-   <small>Notre savoir-faire</small>
-   <h2>Une expertise technique multidisciplinaire</h2>
-   <p>Des outils et méthodes reconnus pour structurer les projets industriels.</p>
+  <div class="section-head">
+   <div class="eyebrow">Savoir-faire</div>
+   <h2>Expertise technique</h2>
+   <p>Des outils et méthodes structurés au service de la performance industrielle.</p>
   </div>
   <div class="expertise-grid">
-   <div class="expertise-item"><strong>CAO / DAO</strong>Conception 2D et 3D</div>
-   <div class="expertise-item"><strong>Lean Manufacturing</strong>Optimisation des processus</div>
-   <div class="expertise-item"><strong>AMDEC / 5S</strong>Analyse et amélioration</div>
-   <div class="expertise-item"><strong>KPI / PDCA</strong>Suivi de performance</div>
+   <div class="expertise-item"><strong>01</strong><h3>Lean Manufacturing</h3><p>5S, Kaizen, PDCA et optimisation des flux.</p></div>
+   <div class="expertise-item"><strong>02</strong><h3>Résolution de problèmes</h3><p>Pareto, Ishikawa, 5 Pourquoi et analyse des causes.</p></div>
+   <div class="expertise-item"><strong>03</strong><h3>Conception technique</h3><p>Modélisation, plans et définition de solutions mécaniques.</p></div>
+   <div class="expertise-item"><strong>04</strong><h3>Performance</h3><p>Suivi des indicateurs, temps de fabrication et coûts.</p></div>
   </div>
  </div>
 </section>
 
-<!-- PORTFOLIO -->
-<section id="projets">
+<section class="portfolio" id="projets">
  <div class="container">
-  <div class="section-title">
-   <small>Portfolio technique</small>
-   <h2>Projets & études de conception</h2>
-   <p>
-    Exemples de concepts techniques et de travaux de conception.
-    Les démonstrations ne constituent pas des références clients réalisées.
-   </p>
+  <div class="section-head">
+   <div class="eyebrow">Portfolio technique</div>
+   <h2>Projets & concepts industriels</h2>
+   <p>Exemples de sujets de conception et d'études techniques. Les visuels ci-dessous sont des illustrations conceptuelles.</p>
   </div>
-  <div class="project-grid">
-
+  <div class="projects">
    <article class="project">
-    <img src="images/projet-machine.jpg" alt="Concept de machine industrielle">
+    <div class="project-art">
+     <svg viewBox="0 0 520 290" role="img" aria-label="Concept de machine manuelle appliquant trois bandes adhésives">
+      <defs><linearGradient id="machine" x2="0" y2="1"><stop stop-color="#8faebc"/><stop offset="1" stop-color="#365e74"/></linearGradient></defs>
+      <path d="M55 220h420" stroke="#52788d" stroke-width="12"/>
+      <path d="M90 205V75h25v130m290 0V75h25v130" fill="none" stroke="#365e74" stroke-width="14"/>
+      <path d="M100 75h330v18H100z" fill="#193e55"/>
+      <g fill="#d8e5e9" stroke="#00a99f" stroke-width="5">
+       <circle cx="170" cy="115" r="39"/><circle cx="265" cy="115" r="39"/><circle cx="360" cy="115" r="39"/>
+      </g>
+      <g fill="#547c91"><circle cx="170" cy="115" r="12"/><circle cx="265" cy="115" r="12"/><circle cx="360" cy="115" r="12"/></g>
+      <path d="M170 154v45m95-45v45m95-45v45" stroke="#00b7ad" stroke-width="5"/>
+      <path d="M75 205h370v18H75z" fill="url(#machine)"/>
+      <rect x="105" y="185" width="310" height="13" rx="3" fill="#d8b875"/>
+      <path d="M150 185v13m95-13v13m95-13v13" stroke="#00a99f" stroke-width="4"/>
+      <g fill="#193e55"><circle cx="110" cy="235" r="13"/><circle cx="420" cy="235" r="13"/></g>
+      <text x="25" y="30" font-size="15" fill="#173e55" font-weight="bold">YB-ADH-001 • CONCEPT 3D</text>
+     </svg>
+    </div>
     <div class="project-info">
-     <span class="demo">CONCEPT DE DÉMONSTRATION</span>
      <h3>YB-ADH-001 – Machine d'application adhésive</h3>
-     <p>
-      Étude conceptuelle d'une machine manuelle destinée à appliquer
-      trois bandes adhésives parallèles sur un support carton.
-     </p>
+     <p>Concept de machine manuelle pour l'application simultanée de trois bandes adhésives parallèles sur carton rigide, avec réglage de pression et déroulement manuel.</p>
+     <span class="tag">Concept de conception mécanique</span>
     </div>
    </article>
-
    <article class="project">
-    <img src="images/projet-outillage.jpg" alt="Conception d'un outillage mécanique">
+    <div class="project-art">
+     <svg viewBox="0 0 520 290" role="img" aria-label="Concept d'outillage industriel de découpe">
+      <path d="M65 220h390" stroke="#557c90" stroke-width="12"/>
+      <path d="M105 205V65h28v140m255 0V65h28v140" fill="#547d91"/>
+      <path d="M115 65h300v18H115z" fill="#183e55"/>
+      <path d="M170 83v55h190V83" fill="#9bb8c4" stroke="#365f75" stroke-width="5"/>
+      <path d="M195 138v35m45-35v35m45-35v35m45-35v35" stroke="#00a99f" stroke-width="6"/>
+      <rect x="145" y="175" width="230" height="18" rx="4" fill="#1d485f"/>
+      <path d="M175 193v23m140-23v23" stroke="#547d91" stroke-width="9"/>
+      <path d="M65 245h390" stroke="#9ab4c0" stroke-width="4" stroke-dasharray="8 8"/>
+      <text x="25" y="30" font-size="15" fill="#173e55" font-weight="bold">OUTILLAGE INDUSTRIEL • CONCEPT</text>
+     </svg>
+    </div>
     <div class="project-info">
-     <span class="demo">ILLUSTRATION TECHNIQUE</span>
-     <h3>Conception d'outillages industriels</h3>
-     <p>
-      Modélisation de composants mécaniques et développement
-      de solutions adaptées aux besoins de production.
-     </p>
+     <h3>Conception d'outillages de production</h3>
+     <p>Étude conceptuelle d'un outillage industriel : définition des fonctions, organisation des composants et réflexion sur l'intégration au processus de fabrication.</p>
+     <span class="tag">Étude technique illustrative</span>
     </div>
    </article>
-
   </div>
  </div>
 </section>
 
-<!-- METHODOLOGIE -->
-<section class="process">
+<section id="methode">
  <div class="container">
-  <div class="section-title">
-   <small>Notre démarche</small>
+  <div class="section-head">
+   <div class="eyebrow">Notre démarche</div>
    <h2>Une méthodologie structurée</h2>
-   <p>Chaque projet suit une démarche technique claire.</p>
+   <p>Une démarche progressive pour comprendre le besoin et construire une solution adaptée.</p>
   </div>
-  <div class="steps">
-   <div class="step">
-    <span>01</span><h3>Analyse du besoin</h3>
-    <p>Compréhension des exigences et contraintes techniques.</p>
-   </div>
-   <div class="step">
-    <span>02</span><h3>Étude technique</h3>
-    <p>Analyse de faisabilité et définition des solutions.</p>
-   </div>
-   <div class="step">
-    <span>03</span><h3>Conception</h3>
-    <p>Développement des plans et propositions techniques.</p>
-   </div>
-   <div class="step">
-    <span>04</span><h3>Optimisation</h3>
-    <p>Analyse des résultats et amélioration de la solution.</p>
-   </div>
+  <div class="method-grid">
+   <div class="step"><div class="step-num">1</div><h3>Analyse du besoin</h3><p>Compréhension du cahier des charges et des contraintes techniques.</p></div>
+   <div class="step"><div class="step-num">2</div><h3>Étude technique</h3><p>Analyse de faisabilité et définition des solutions possibles.</p></div>
+   <div class="step"><div class="step-num">3</div><h3>Conception</h3><p>Modélisation, plans et préparation de la solution retenue.</p></div>
+   <div class="step"><div class="step-num">4</div><h3>Optimisation</h3><p>Évaluation, ajustements et amélioration de la solution.</p></div>
   </div>
  </div>
 </section>
 
-<!-- CONTACT -->
 <section class="contact" id="contact">
  <div class="container">
-  <div class="section-title">
-   <small>Contact</small>
-   <h2>Parlons de votre projet industriel</h2>
-   <p>Vous avez un besoin en conception, méthodes ou industrialisation ? Contactez-nous.</p>
+  <div class="section-head">
+   <div class="eyebrow">Parlons de votre projet</div>
+   <h2>Contactez YB Industrial Solutions</h2>
+   <p>Pour une étude, une conception mécanique ou un besoin d'amélioration industrielle.</p>
   </div>
   <div class="contact-grid">
-   <div class="contact-info">
-    <h3>YB Industrial Solutions</h3>
-    <p><strong>Responsable :</strong> Yassine Belarbi</p>
-    <p><strong>Localisation :</strong> Kénitra, Maroc</p>
-    <p><strong>Zone d'intervention :</strong> Kénitra, Rabat, Casablanca et Tanger</p>
-    <p><strong>E-mail :</strong> Yassine.Belarbi.officiel@mail.com</p>
-    <p><strong>Téléphone :</strong> +212 773 11 95 52</p>
+   <div class="contact-card">
+    <h3>Coordonnées</h3>
+    <div class="contact-line"><strong>Responsable</strong>Yassine Belarbi</div>
+    <div class="contact-line"><strong>Email</strong><a href="mailto:Yassine.Belarbi.officiel@mail.com">Yassine.Belarbi.officiel@mail.com</a></div>
+    <div class="contact-line"><strong>Téléphone / WhatsApp</strong><a href="https://wa.me/212773119552" target="_blank" rel="noopener">+212 773 11 95 52</a></div>
+    <div class="contact-line"><strong>Zone d'intervention</strong>Kénitra • Rabat • Casablanca • Tanger</div>
    </div>
-   <div class="contact-box">
-    <h3>Contact direct</h3>
-    <p>Pour discuter de votre besoin technique :</p>
-    <a href="https://wa.me/212773119552" target="_blank" rel="noopener">
-     Contacter par WhatsApp
-    </a>
-    <a href="mailto:Yassine.Belarbi.officiel@mail.com">
-     Envoyer un e-mail
-    </a>
+   <div class="contact-card">
+    <h3>Votre projet industriel</h3>
+    <p style="color:#d2e0e8;margin-bottom:20px">Vous avez un besoin en conception, méthodes, industrialisation ou optimisation de processus ? Échangeons sur votre projet.</p>
+    <a class="btn btn-primary" href="mailto:Yassine.Belarbi.officiel@mail.com?subject=Demande%20de%20renseignement%20-%20YB%20Industrial%20Solutions">Envoyer un email</a>
+    <p class="contact-note">Présentez votre besoin et les principales contraintes techniques. Nous pourrons échanger sur les possibilités d'étude et d'accompagnement.</p>
    </div>
   </div>
  </div>
 </section>
+</main>
 
 <footer>
- <p>© <span id="year"></span> <strong>YB Industrial Solutions</strong> — Bureau d'études industrielles | Maroc</p>
+ <p><strong>YB INDUSTRIAL SOLUTIONS</strong> — Bureau d'études & solutions industrielles</p>
+ <p>© <span id="year"></span> YB Industrial Solutions. Tous droits réservés.</p>
 </footer>
 
 <script>
 document.getElementById("year").textContent = new Date().getFullYear();
+document.querySelectorAll("nav a").forEach(link => {
+ link.addEventListener("click", () => document.querySelector("nav").classList.remove("open"));
+});
 </script>
-
 </body>
 </html>
